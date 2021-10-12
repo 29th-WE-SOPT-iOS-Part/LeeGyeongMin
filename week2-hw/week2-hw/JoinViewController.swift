@@ -55,7 +55,9 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         
         nextVC.name = nameTextField.text
         nextVC.modalPresentationStyle = .fullScreen
-        self.present(nextVC, animated: true, completion: nil)
+        self.present(nextVC, animated: true){
+            self.navigationController?.popViewController(animated: true )
+        }
     }
     
 }

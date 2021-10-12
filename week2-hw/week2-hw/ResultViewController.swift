@@ -21,7 +21,7 @@ class ResultViewController: UIViewController, UITabBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setNameFromOthers()
     }
     
     func setNameFromOthers(){
@@ -33,15 +33,19 @@ class ResultViewController: UIViewController, UITabBarDelegate {
     }
     
     @IBAction func touchUpToGoNext(_ sender: Any) {
-        
-//        var mainBoard = UIStoryboard(name: "Tabbar", bundle: nil)
-//        var tabbar: UITabBarController? = (mainBoard.instantiateViewController(withIdentifier: "TabbarController") as? UITabBarController)
-//        navigationController?.pushViewController(rootViewController : tabbar)
+
         
     }
     
     @IBAction func touchUpToGoLogIn(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        let nowVC = self.presentingViewController
+        
+        self.dismiss(animated: true){
+            
+            guard let rootVC = nowVC as? UINavigationController else {return}
+            rootVC.popToRootViewController(animated: false)
+        
+        }
     }
     
 }

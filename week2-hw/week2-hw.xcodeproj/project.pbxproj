@@ -15,13 +15,13 @@
 		985B5E622713167A009605D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985B5E602713167A009605D6 /* LaunchScreen.storyboard */; };
 		98706D0F27133F67004506DC /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706D0E27133F67004506DC /* JoinViewController.swift */; };
 		98706D1127133F6F004506DC /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706D1027133F6F004506DC /* ResultViewController.swift */; };
-		98706D132713419D004506DC /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98706D122713419D004506DC /* Tabbar.storyboard */; };
 		98706D1527135ACD004506DC /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706D1427135ACD004506DC /* TabbarController.swift */; };
 		98706D1727135AFD004506DC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706D1627135AFD004506DC /* HomeViewController.swift */; };
 		98706D1927135B07004506DC /* ShortsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706D1827135B07004506DC /* ShortsViewController.swift */; };
 		98706D1B27135B16004506DC /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706D1A27135B16004506DC /* AddViewController.swift */; };
 		98706D1D27135B21004506DC /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706D1C27135B21004506DC /* SubscribeViewController.swift */; };
 		98706D1F27135B59004506DC /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98706D1E27135B59004506DC /* LibraryViewController.swift */; };
+		98A4798A2714D02E00F19B70 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A479892714D02E00F19B70 /* Tabbar.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,13 +35,13 @@
 		985B5E632713167A009605D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98706D0E27133F67004506DC /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		98706D1027133F6F004506DC /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		98706D122713419D004506DC /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		98706D1427135ACD004506DC /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		98706D1627135AFD004506DC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		98706D1827135B07004506DC /* ShortsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsViewController.swift; sourceTree = "<group>"; };
 		98706D1A27135B16004506DC /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		98706D1C27135B21004506DC /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
 		98706D1E27135B59004506DC /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		98A479892714D02E00F19B70 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,6 @@
 				985B5E5727131679009605D6 /* SceneDelegate.swift */,
 				985B5E5927131679009605D6 /* ViewController.swift */,
 				985B5E5B27131679009605D6 /* Main.storyboard */,
-				98706D122713419D004506DC /* Tabbar.storyboard */,
 				98706D1427135ACD004506DC /* TabbarController.swift */,
 				985B5E5E2713167A009605D6 /* Assets.xcassets */,
 				985B5E602713167A009605D6 /* LaunchScreen.storyboard */,
@@ -90,6 +89,7 @@
 				98706D1A27135B16004506DC /* AddViewController.swift */,
 				98706D1C27135B21004506DC /* SubscribeViewController.swift */,
 				98706D1E27135B59004506DC /* LibraryViewController.swift */,
+				98A479892714D02E00F19B70 /* Tabbar.storyboard */,
 			);
 			path = "week2-hw";
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98706D132713419D004506DC /* Tabbar.storyboard in Resources */,
+				98A4798A2714D02E00F19B70 /* Tabbar.storyboard in Resources */,
 				985B5E622713167A009605D6 /* LaunchScreen.storyboard in Resources */,
 				985B5E5F2713167A009605D6 /* Assets.xcassets in Resources */,
 				985B5E5D27131679009605D6 /* Main.storyboard in Resources */,

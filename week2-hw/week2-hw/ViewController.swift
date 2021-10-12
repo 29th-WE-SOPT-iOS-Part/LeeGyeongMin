@@ -40,12 +40,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         contactTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        nameTextField.text?.removeAll()
+        contactTextField.text?.removeAll()
+        passwordTextField.text?.removeAll()
+    }
     @IBAction func touchUpToCreateAccount(_ sender: Any) {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "JoinViewController") as?
                 JoinViewController else {return}
         
+        nextVC.viewWillAppear(false)
         self.navigationController?.pushViewController(nextVC, animated: true)
+        
     }
     
     @IBAction func touchUpToGoNext(_ sender: Any) {
