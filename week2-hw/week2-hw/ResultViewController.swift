@@ -43,7 +43,7 @@ class ResultViewController: UIViewController, UITabBarDelegate {
         self.dismiss(animated: true){
             
             guard let rootVC = nowVC as? UINavigationController else {return}
-            rootVC.popToRootViewController(animated: false)
+            rootVC.popToRootViewController(animated: true)
         
         }
     }

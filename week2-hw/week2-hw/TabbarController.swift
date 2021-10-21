@@ -34,7 +34,7 @@ class TabbarController: UITabBarController {
         
         shortsVC.tabBarItem.title = "Shorts"
         shortsVC.tabBarItem.image = UIImage(named: "shorts")
-        shortsVC.tabBarItem.selectedImage = UIImage(named: "shorts")
+        shortsVC.tabBarItem.selectedImage = UIImage(named: "shortsfill")
         
         addVC.tabBarItem.title = "추가"
         addVC.tabBarItem.image = UIImage(named: "add")
