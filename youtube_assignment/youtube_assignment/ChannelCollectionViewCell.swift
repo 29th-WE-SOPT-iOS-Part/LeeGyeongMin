@@ -4,14 +4,14 @@ class ChannelCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "ChannelCollectionViewCell"
     
-    // MARK: - ImageView
-    @IBOutlet weak var creatorProfileImageView: UIImageView!
+    // MARK: - Button
+    @IBOutlet weak var creatorProfileButton: UIButton!
     
     // MARK: - Label
     @IBOutlet weak var creatorNameLabel: UILabel!
     
     func setData(creatorName : String, creatorProfile: UIImage?){
         creatorNameLabel.text = creatorName
-        creatorProfileImageView.image = creatorProfile
+        creatorProfileButton.setImage(creatorProfile, for: .normal)
     }
 }
