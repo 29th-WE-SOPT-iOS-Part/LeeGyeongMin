@@ -140,7 +140,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cNJ-XN-FDH">
-                                <rect key="frame" x="0.0" y="192" width="414" height="670"/>
+                                <rect key="frame" x="0.0" y="240" width="414" height="622"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Csm-Rj-qBS">
@@ -255,24 +255,66 @@
                                     <constraint firstAttribute="height" constant="44" id="tiA-Bu-ylC"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qhi-cW-VcV">
+                                <rect key="frame" x="0.0" y="192" width="414" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="DLh-Zg-p4c"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DNy-Mn-vfF">
+                                    <size key="itemSize" width="128" height="44"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FunctionCollectionViewCell" id="yKE-6A-O01" customClass="FunctionCollectionViewCell" customModule="youtube_assignment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="2" width="128" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZJu-z7-CZg">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kq8-Ku-Erj">
+                                                    <rect key="frame" x="52" y="15" width="24" height="14"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Kq8-Ku-Erj" firstAttribute="centerY" secondItem="ZJu-z7-CZg" secondAttribute="centerY" id="0QZ-u5-6k7"/>
+                                                <constraint firstItem="Kq8-Ku-Erj" firstAttribute="centerX" secondItem="ZJu-z7-CZg" secondAttribute="centerX" id="T6j-yg-M4N"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="128" height="44"/>
+                                        <connections>
+                                            <outlet property="functionNameButton" destination="Kq8-Ku-Erj" id="0iE-TB-2EZ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CT0-th-w9i"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="CT0-th-w9i" firstAttribute="trailing" secondItem="Qhi-cW-VcV" secondAttribute="trailing" id="0g9-MQ-qwM"/>
                             <constraint firstItem="CT0-th-w9i" firstAttribute="trailing" secondItem="Csm-Rj-qBS" secondAttribute="trailing" id="9Uh-ym-JU7"/>
                             <constraint firstItem="Csm-Rj-qBS" firstAttribute="leading" secondItem="CT0-th-w9i" secondAttribute="leading" id="BAz-9Z-FRr"/>
                             <constraint firstItem="cNJ-XN-FDH" firstAttribute="leading" secondItem="CT0-th-w9i" secondAttribute="leading" id="JJa-w6-l6s"/>
+                            <constraint firstItem="Qhi-cW-VcV" firstAttribute="leading" secondItem="CT0-th-w9i" secondAttribute="leading" id="SPj-iy-0Rh"/>
                             <constraint firstItem="CT0-th-w9i" firstAttribute="trailing" secondItem="tGI-Ot-cxW" secondAttribute="trailing" id="ZpP-IN-qD0"/>
-                            <constraint firstItem="cNJ-XN-FDH" firstAttribute="top" secondItem="Csm-Rj-qBS" secondAttribute="bottom" id="aST-YJ-6uI"/>
                             <constraint firstItem="tGI-Ot-cxW" firstAttribute="leading" secondItem="CT0-th-w9i" secondAttribute="leading" id="dVD-gT-cyT"/>
                             <constraint firstItem="tGI-Ot-cxW" firstAttribute="top" secondItem="CT0-th-w9i" secondAttribute="top" id="jf8-Qh-YG5"/>
+                            <constraint firstItem="Qhi-cW-VcV" firstAttribute="top" secondItem="Csm-Rj-qBS" secondAttribute="bottom" id="ldZ-oe-vjV"/>
                             <constraint firstItem="CT0-th-w9i" firstAttribute="bottom" secondItem="cNJ-XN-FDH" secondAttribute="bottom" id="olq-Ew-GXc"/>
+                            <constraint firstItem="cNJ-XN-FDH" firstAttribute="top" secondItem="Qhi-cW-VcV" secondAttribute="bottom" id="sf3-8r-VKI"/>
                             <constraint firstItem="CT0-th-w9i" firstAttribute="trailing" secondItem="cNJ-XN-FDH" secondAttribute="trailing" id="syS-71-HbG"/>
                             <constraint firstItem="Csm-Rj-qBS" firstAttribute="top" secondItem="tGI-Ot-cxW" secondAttribute="bottom" id="u1D-Ja-ee9"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="channelCollectionView" destination="Csm-Rj-qBS" id="cLM-mm-sHt"/>
+                        <outlet property="functionCollectionView" destination="Qhi-cW-VcV" id="joJ-I5-izY"/>
                         <outlet property="logoImageView" destination="5XW-A5-SUP" id="cwO-8R-X1q"/>
                         <outlet property="logoVIew" destination="tGI-Ot-cxW" id="d6l-yM-jnl"/>
                         <outlet property="notificationButton" destination="9vW-eF-d6I" id="ArY-ln-vCF"/>

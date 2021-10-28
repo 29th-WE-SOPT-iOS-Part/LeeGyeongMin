@@ -7,6 +7,7 @@ class HomeVC: UIViewController {
     
     // MARK: - CollectionView
     @IBOutlet weak var channelCollectionView: UICollectionView!
+    @IBOutlet weak var functionCollectionView: UICollectionView!
     
     // MARK: - View
     @IBOutlet weak var logoVIew: UIView!
@@ -22,21 +23,34 @@ class HomeVC: UIViewController {
     
     var videoContentList : [VideoContentData] = []
     var channelContentList : [ChannelContentData] = []
+    var functionContentList : [FunctionContentData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initVideoContentList()
         initChannelContentList()
+        initFunctionContentList()
         registerXib()
-        videoTableView.dataSource = self
-        videoTableView.delegate = self
-        channelCollectionView.dataSource = self
-        channelCollectionView.delegate = self
+        initDelegates()
     }
 
     func registerXib() {
         let xibName = UINib(nibName: videoTableViewCell.identifier, bundle: nil)
         videoTableView.register(xibName, forCellReuseIdentifier: videoTableViewCell.identifier)
+    }
+    
+    func initDelegates(){
+        videoTableView.dataSource = self
+        videoTableView.delegate = self
+        
+        channelCollectionView.dataSource = self
+        channelCollectionView.delegate = self
+        channelCollectionView.tag = 1
+        
+        functionCollectionView.dataSource = self
+        functionCollectionView.delegate = self
+        functionCollectionView.tag = 2
+        
     }
     
     func initVideoContentList(){
@@ -59,8 +73,20 @@ class HomeVC: UIViewController {
             ChannelContentData(channelName: "PlanPart", channelProfileIconName: "ggamju6")
         ])
     }
+    
+    func initFunctionContentList(){
+        functionContentList.append(contentsOf: [
+            FunctionContentData(functionContentName: "전체", functionContentIconName: "frame1"),
+            FunctionContentData(functionContentName: "오늘", functionContentIconName: "frame2"),
+            FunctionContentData(functionContentName: "이어서 시청하기", functionContentIconName: "frame3"),
+            FunctionContentData(functionContentName: "시청하지 않음", functionContentIconName: "frame4"),
+            FunctionContentData(functionContentName: "실시간", functionContentIconName: "frame5"),
+            FunctionContentData(functionContentName: "게시물", functionContentIconName: "frame6"),
+        ])
+    }
 }
 
+// MARK: - TableView manage
 extension HomeVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 306
@@ -78,31 +104,67 @@ extension HomeVC : UITableViewDataSource {
         cell.setData(videoData: videoContentList[indexPath.row])
         return cell
     }
-    
-    
 }
 
+// MARK: - CollectionView manage
 extension HomeVC : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return channelContentList.count
+        
+        if (collectionView.tag == 1) {
+            return channelContentList.count
+        }
+        else {
+            return functionContentList.count
+        }
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChannelCollectionViewCell.identifier, for: indexPath)
-                as? ChannelCollectionViewCell else {return UICollectionViewCell()}
         
-        cell.setData(creatorName: channelContentList[indexPath.row].channelName, creatorProfile: channelContentList[indexPath.row].makeImage())
-        
-        return cell
+        if (collectionView.tag == 1) {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChannelCollectionViewCell.identifier, for: indexPath)
+                    as? ChannelCollectionViewCell else {return UICollectionViewCell()}
+
+            cell.setData(creatorName: channelContentList[indexPath.row].channelName, creatorProfile: channelContentList[indexPath.row].makeImage())
+            return cell
+        }
+
+        else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FunctionCollectionViewCell.identifier, for: indexPath) as? FunctionCollectionViewCell else {return UICollectionViewCell()}
+
+            cell.setData(functionIcon: functionContentList[indexPath.item].makeImage())
+            return cell
+        }
     }
 }
 
 
 extension HomeVC : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 72, height: 104)
+    
+        
+        if (collectionView.tag == 1) {
+            return CGSize(width: 72, height: 104)
+        }
+        else {
+            var cellContentName = functionContentList[indexPath.row].functionContentName
+            cellContentName = cellContentName.components(separatedBy: .whitespaces).joined()
+            
+            var cellWidth : Int
+            if(cellContentName.count<3){
+                cellWidth = 50
+            }
+            else{
+                cellWidth = 65 + (cellContentName.count-3) * 13
+            }
+            
+            let cellHeight : Int = 32
+            
+            return CGSize(width: cellWidth, height: cellHeight)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
         return UIEdgeInsets.zero
     }
     
@@ -111,6 +173,11 @@ extension HomeVC : UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        if (collectionView.tag == 1) {
+            return 0
+        }
+        else {
+            return 5
+        }
     }
 }
