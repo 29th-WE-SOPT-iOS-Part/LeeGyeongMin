@@ -28,6 +28,7 @@ class videoTableViewCell: UITableViewCell {
         videoInfoLabel.text = videoData.videoInfo
         videoImageView.image = videoData.makeImageForVideo()
         creatorImageVIew.image = videoData.makeImageForCreator()
+        videoImageView.contentMode = .scaleToFill
     }
     
 }

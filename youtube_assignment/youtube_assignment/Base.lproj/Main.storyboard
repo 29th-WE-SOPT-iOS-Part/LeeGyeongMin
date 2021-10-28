@@ -286,7 +286,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHg-a8-OQa">
                                 <rect key="frame" x="113" y="503.5" width="190" height="28.5"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="다른  계정으로 로그인하기">
+                                <buttonConfiguration key="configuration" style="plain" title="다른 계정으로 로그인하기">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                 </buttonConfiguration>
                                 <connections>
