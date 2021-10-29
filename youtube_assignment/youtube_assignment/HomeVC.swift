@@ -45,12 +45,9 @@ class HomeVC: UIViewController {
         
         channelCollectionView.dataSource = self
         channelCollectionView.delegate = self
-        channelCollectionView.tag = 1
         
         functionCollectionView.dataSource = self
         functionCollectionView.delegate = self
-        functionCollectionView.tag = 2
-        
     }
     
     func initVideoContentList(){
@@ -76,12 +73,12 @@ class HomeVC: UIViewController {
     
     func initFunctionContentList(){
         functionContentList.append(contentsOf: [
-            FunctionContentData(functionContentName: "전체", functionContentIconName: "frame1"),
-            FunctionContentData(functionContentName: "오늘", functionContentIconName: "frame2"),
-            FunctionContentData(functionContentName: "이어서 시청하기", functionContentIconName: "frame3"),
-            FunctionContentData(functionContentName: "시청하지 않음", functionContentIconName: "frame4"),
-            FunctionContentData(functionContentName: "실시간", functionContentIconName: "frame5"),
-            FunctionContentData(functionContentName: "게시물", functionContentIconName: "frame6"),
+            FunctionContentData(functionContentName: "전체"),
+            FunctionContentData(functionContentName: "오늘"),
+            FunctionContentData(functionContentName: "이어서 시청하기"),
+            FunctionContentData(functionContentName: "시청하지 않음"),
+            FunctionContentData(functionContentName: "실시간"),
+            FunctionContentData(functionContentName: "게시물")
         ])
     }
 }
@@ -110,7 +107,7 @@ extension HomeVC : UITableViewDataSource {
 extension HomeVC : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if (collectionView.tag == 1) {
+        if (collectionView == channelCollectionView) {
             return channelContentList.count
         }
         else {
@@ -120,7 +117,7 @@ extension HomeVC : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if (collectionView.tag == 1) {
+        if (collectionView == channelCollectionView) {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChannelCollectionViewCell.identifier, for: indexPath)
                     as? ChannelCollectionViewCell else {return UICollectionViewCell()}
 
@@ -131,7 +128,7 @@ extension HomeVC : UICollectionViewDataSource {
         else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FunctionCollectionViewCell.identifier, for: indexPath) as? FunctionCollectionViewCell else {return UICollectionViewCell()}
 
-            cell.setData(functionIcon: functionContentList[indexPath.item].makeImage())
+            cell.setData(functionName: functionContentList[indexPath.row].functionContentName)
             return cell
         }
     }
@@ -142,22 +139,19 @@ extension HomeVC : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
         
-        if (collectionView.tag == 1) {
-            return CGSize(width: 72, height: 104)
+        if (collectionView == channelCollectionView) {
+            let cellWidth : CGFloat = 72
+            let cellHeight = channelCollectionView.frame.height
+            return CGSize(width: cellWidth, height: cellHeight)
         }
         else {
-            var cellContentName = functionContentList[indexPath.row].functionContentName
-            cellContentName = cellContentName.components(separatedBy: .whitespaces).joined()
+            guard let cell = functionCollectionView.dequeueReusableCell(withReuseIdentifier: FunctionCollectionViewCell.identifier, for: indexPath) as?  FunctionCollectionViewCell else {return .zero}
             
-            var cellWidth : Int
-            if(cellContentName.count<3){
-                cellWidth = 50
-            }
-            else{
-                cellWidth = 65 + (cellContentName.count-3) * 13
-            }
+            cell.functionNameLabel.text = functionContentList[indexPath.row].functionContentName
+            cell.functionNameLabel.sizeToFit()
             
-            let cellHeight : Int = 32
+            let cellWidth = cell.functionBorderView.frame.width + 10
+            let cellHeight = functionCollectionView.frame.height
             
             return CGSize(width: cellWidth, height: cellHeight)
         }
@@ -173,11 +167,6 @@ extension HomeVC : UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        if (collectionView.tag == 1) {
-            return 0
-        }
-        else {
-            return 5
-        }
+        return 0
     }
 }
