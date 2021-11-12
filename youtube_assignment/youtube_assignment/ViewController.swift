@@ -117,6 +117,10 @@ extension ViewController {
             case .success(let loginResponse):
                 guard let response = loginResponse as? LoginResponseData else {return}
                 self.simpleAlert(title: "로그인", message:response.message)
+                
+                UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.userNameKey)
+                UserDefaults.standard.synchronize()
+                
                 self.requestStatus = response.success
                 
             case .requestErr(let msg):

@@ -19,6 +19,7 @@
 		98193D95273D07B800F185B9 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98193D94273D07B800F185B9 /* NetworkResult.swift */; };
 		98193D97273D088600F185B9 /* LoginResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98193D96273D088600F185B9 /* LoginResponseDataModel.swift */; };
 		98193D99273D08DC00F185B9 /* UserSignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98193D98273D08DC00F185B9 /* UserSignService.swift */; };
+		98497289273EDDD600D9554C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98497288273EDDD600D9554C /* UserDefaults.swift */; };
 		9853590D273D94C000DB379C /* JoinResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9853590C273D94C000DB379C /* JoinResponseDataModel.swift */; };
 		9853590F273D95B100DB379C /* UserJoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9853590E273D95B100DB379C /* UserJoinService.swift */; };
 		98B3A8B52726FD9A00EDD805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3A8B42726FD9A00EDD805 /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 		98193D94273D07B800F185B9 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		98193D96273D088600F185B9 /* LoginResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDataModel.swift; sourceTree = "<group>"; };
 		98193D98273D08DC00F185B9 /* UserSignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignService.swift; sourceTree = "<group>"; };
+		98497288273EDDD600D9554C /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		9853590C273D94C000DB379C /* JoinResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinResponseDataModel.swift; sourceTree = "<group>"; };
 		9853590E273D95B100DB379C /* UserJoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJoinService.swift; sourceTree = "<group>"; };
 		98B3A8B12726FD9A00EDD805 /* youtube_assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youtube_assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +150,7 @@
 				98193D98273D08DC00F185B9 /* UserSignService.swift */,
 				9853590C273D94C000DB379C /* JoinResponseDataModel.swift */,
 				9853590E273D95B100DB379C /* UserJoinService.swift */,
+				98497288273EDDD600D9554C /* UserDefaults.swift */,
 			);
 			path = youtube_assignment;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				98026A782729126600192959 /* videoTableViewCell.swift in Sources */,
 				98026A8327297A7500192959 /* FunctionContentDataModel.swift in Sources */,
 				9853590D273D94C000DB379C /* JoinResponseDataModel.swift in Sources */,
+				98497289273EDDD600D9554C /* UserDefaults.swift in Sources */,
 				98026A7D2729223300192959 /* ChannelCollectionViewCell.swift in Sources */,
 				98193D93273D071800F185B9 /* APIConstants.swift in Sources */,
 				98B3A8D527270A8400EDD805 /* AddVC.swift in Sources */,
