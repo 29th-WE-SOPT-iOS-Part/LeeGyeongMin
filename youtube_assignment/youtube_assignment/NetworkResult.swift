@@ -1,8 +1,9 @@
-//
-//  NetworkResult.swift
-//  youtube_assignment
-//
-//  Created by 이경민 on 2021/11/11.
-//
-
 import Foundation
+
+enum NetworkResult<T> {
+    case success(T)
+    case requestErr(T)
+    case pathErr(T)
+    case serverErr
+    case networkFail
+}

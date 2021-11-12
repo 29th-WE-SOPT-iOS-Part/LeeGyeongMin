@@ -1,10 +1,10 @@
 import Foundation
 import Alamofire
 
-struct UserSignUpService {
-    static let shared = UserSignUpService()
+struct UserJoinService {
+    static let shared = UserJoinService()
     
-    func login(name : String, email: String, password: String, completion: @escaping (NetworkResult<Any>)-> (Void)) {
+    func join(name : String, email: String, password: String, completion: @escaping (NetworkResult<Any>)-> (Void)) {
         
         let url = APIConstants.joinURL
         
@@ -13,20 +13,21 @@ struct UserSignUpService {
         ]
         
         let body : Parameters = [
-            "name" : name,
             "email" : email,
+            "name" : name,
             "password" : password
         ]
         
         let dataRequest = AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
         
-        dataRequest.responseData { dataResonse in
-            switch dataResonse.result {
+        dataRequest.responseData { dataResponse in
+            switch dataResponse.result {
             case .success:
-                guard let statusCode = dataResonse.response?.statusCode else {return}
-                guard let value = dataResonse.value else {return}
+                guard let statusCode = dataResponse.response?.statusCode else {return}
+                guard let value = dataResponse.value else {return}
                 let networkResult = self.judgeLoginStatus(by: statusCode, value)
                 completion(networkResult)
+                
             case .failure(let err):
                 print(err)
                 completion(.networkFail)
@@ -37,7 +38,7 @@ struct UserSignUpService {
     private func judgeLoginStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {
         case 200: return isValidLoginData(data: data)
-        case 400: return .pathErr(0)
+        case 400: return isValidLoginData(data: data)
         case 500: return .serverErr
         default: return .networkFail
         }
@@ -45,8 +46,8 @@ struct UserSignUpService {
     
     private func isValidLoginData(data: Data) -> NetworkResult<Any>{
         let decoder = JSONDecoder()
-        guard let decodeData = try? decoder.decode(LoginResponseData.self, from: data)
+        guard let decodedData = try? decoder.decode(JoinResponseData.self, from: data)
         else {return .pathErr(0)}
-        return .success(decodeData)
+        return .success(decodedData)
     }
 }
