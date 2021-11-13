@@ -14,6 +14,14 @@
 		98026A7F272924D000192959 /* ChannelContentDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98026A7E272924D000192959 /* ChannelContentDataModel.swift */; };
 		98026A8127293E6600192959 /* FunctionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98026A8027293E6600192959 /* FunctionCollectionViewCell.swift */; };
 		98026A8327297A7500192959 /* FunctionContentDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98026A8227297A7500192959 /* FunctionContentDataModel.swift */; };
+		98193D91273CF93600F185B9 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98193D90273CF93600F185B9 /* NavigationController.swift */; };
+		98193D93273D071800F185B9 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98193D92273D071800F185B9 /* APIConstants.swift */; };
+		98193D95273D07B800F185B9 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98193D94273D07B800F185B9 /* NetworkResult.swift */; };
+		98193D97273D088600F185B9 /* LoginResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98193D96273D088600F185B9 /* LoginResponseDataModel.swift */; };
+		98193D99273D08DC00F185B9 /* UserSignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98193D98273D08DC00F185B9 /* UserSignService.swift */; };
+		98497289273EDDD600D9554C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98497288273EDDD600D9554C /* UserDefaults.swift */; };
+		9853590D273D94C000DB379C /* JoinResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9853590C273D94C000DB379C /* JoinResponseDataModel.swift */; };
+		9853590F273D95B100DB379C /* UserJoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9853590E273D95B100DB379C /* UserJoinService.swift */; };
 		98B3A8B52726FD9A00EDD805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3A8B42726FD9A00EDD805 /* AppDelegate.swift */; };
 		98B3A8B72726FD9A00EDD805 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3A8B62726FD9A00EDD805 /* SceneDelegate.swift */; };
 		98B3A8B92726FD9A00EDD805 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3A8B82726FD9A00EDD805 /* ViewController.swift */; };
@@ -29,9 +37,13 @@
 		98B3A8D527270A8400EDD805 /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3A8D427270A8400EDD805 /* AddVC.swift */; };
 		98B3A8D727270AEF00EDD805 /* SubscribeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3A8D627270AEF00EDD805 /* SubscribeVC.swift */; };
 		98B3A8D927270AFC00EDD805 /* LibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3A8D827270AFC00EDD805 /* LibraryVC.swift */; };
+		B241C3276102C208DA10BBDB /* Pods_youtube_assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E84344C611EA59A7AACD0 /* Pods_youtube_assignment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CBA6EF59DC73A7EAEB1EF38 /* Pods-youtube_assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtube_assignment.release.xcconfig"; path = "Target Support Files/Pods-youtube_assignment/Pods-youtube_assignment.release.xcconfig"; sourceTree = "<group>"; };
+		229E84344C611EA59A7AACD0 /* Pods_youtube_assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_youtube_assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64A96FB608B4E697A91D5F4C /* Pods-youtube_assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtube_assignment.debug.xcconfig"; path = "Target Support Files/Pods-youtube_assignment/Pods-youtube_assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		98026A762729126600192959 /* videoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoTableViewCell.swift; sourceTree = "<group>"; };
 		98026A772729126600192959 /* videoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = videoTableViewCell.xib; sourceTree = "<group>"; };
 		98026A7A272918A500192959 /* VideoContentDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContentDataModel.swift; sourceTree = "<group>"; };
@@ -39,6 +51,14 @@
 		98026A7E272924D000192959 /* ChannelContentDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelContentDataModel.swift; sourceTree = "<group>"; };
 		98026A8027293E6600192959 /* FunctionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionCollectionViewCell.swift; sourceTree = "<group>"; };
 		98026A8227297A7500192959 /* FunctionContentDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionContentDataModel.swift; sourceTree = "<group>"; };
+		98193D90273CF93600F185B9 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		98193D92273D071800F185B9 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		98193D94273D07B800F185B9 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		98193D96273D088600F185B9 /* LoginResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDataModel.swift; sourceTree = "<group>"; };
+		98193D98273D08DC00F185B9 /* UserSignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignService.swift; sourceTree = "<group>"; };
+		98497288273EDDD600D9554C /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		9853590C273D94C000DB379C /* JoinResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinResponseDataModel.swift; sourceTree = "<group>"; };
+		9853590E273D95B100DB379C /* UserJoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJoinService.swift; sourceTree = "<group>"; };
 		98B3A8B12726FD9A00EDD805 /* youtube_assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youtube_assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B3A8B42726FD9A00EDD805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98B3A8B62726FD9A00EDD805 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,17 +83,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B241C3276102C208DA10BBDB /* Pods_youtube_assignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		250D935A6C1841592442580F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64A96FB608B4E697A91D5F4C /* Pods-youtube_assignment.debug.xcconfig */,
+				1CBA6EF59DC73A7EAEB1EF38 /* Pods-youtube_assignment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		98B3A8A82726FD9A00EDD805 = {
 			isa = PBXGroup;
 			children = (
 				98B3A8B32726FD9A00EDD805 /* youtube_assignment */,
 				98B3A8B22726FD9A00EDD805 /* Products */,
+				250D935A6C1841592442580F /* Pods */,
+				B0978C7990050FAE8F7CAE2C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,8 +143,24 @@
 				98026A7E272924D000192959 /* ChannelContentDataModel.swift */,
 				98026A8027293E6600192959 /* FunctionCollectionViewCell.swift */,
 				98026A8227297A7500192959 /* FunctionContentDataModel.swift */,
+				98193D90273CF93600F185B9 /* NavigationController.swift */,
+				98193D92273D071800F185B9 /* APIConstants.swift */,
+				98193D94273D07B800F185B9 /* NetworkResult.swift */,
+				98193D96273D088600F185B9 /* LoginResponseDataModel.swift */,
+				98193D98273D08DC00F185B9 /* UserSignService.swift */,
+				9853590C273D94C000DB379C /* JoinResponseDataModel.swift */,
+				9853590E273D95B100DB379C /* UserJoinService.swift */,
+				98497288273EDDD600D9554C /* UserDefaults.swift */,
 			);
 			path = youtube_assignment;
+			sourceTree = "<group>";
+		};
+		B0978C7990050FAE8F7CAE2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				229E84344C611EA59A7AACD0 /* Pods_youtube_assignment.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98B3A8C52726FD9A00EDD805 /* Build configuration list for PBXNativeTarget "youtube_assignment" */;
 			buildPhases = (
+				15180005A1A8428117EAE1F2 /* [CP] Check Pods Manifest.lock */,
 				98B3A8AD2726FD9A00EDD805 /* Sources */,
 				98B3A8AE2726FD9A00EDD805 /* Frameworks */,
 				98B3A8AF2726FD9A00EDD805 /* Resources */,
+				52EEAC3F687FF1F482D16F81 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +233,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15180005A1A8428117EAE1F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-youtube_assignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52EEAC3F687FF1F482D16F81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-youtube_assignment/Pods-youtube_assignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-youtube_assignment/Pods-youtube_assignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-youtube_assignment/Pods-youtube_assignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		98B3A8AD2726FD9A00EDD805 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -190,17 +282,25 @@
 			files = (
 				98026A8127293E6600192959 /* FunctionCollectionViewCell.swift in Sources */,
 				98B3A8D927270AFC00EDD805 /* LibraryVC.swift in Sources */,
+				98193D97273D088600F185B9 /* LoginResponseDataModel.swift in Sources */,
 				98026A782729126600192959 /* videoTableViewCell.swift in Sources */,
 				98026A8327297A7500192959 /* FunctionContentDataModel.swift in Sources */,
+				9853590D273D94C000DB379C /* JoinResponseDataModel.swift in Sources */,
+				98497289273EDDD600D9554C /* UserDefaults.swift in Sources */,
 				98026A7D2729223300192959 /* ChannelCollectionViewCell.swift in Sources */,
+				98193D93273D071800F185B9 /* APIConstants.swift in Sources */,
 				98B3A8D527270A8400EDD805 /* AddVC.swift in Sources */,
 				98B3A8CB2726FFDC00EDD805 /* ResultVC.swift in Sources */,
 				98B3A8D127270A6A00EDD805 /* HomeVC.swift in Sources */,
 				98B3A8CF27270A5800EDD805 /* TabbarController.swift in Sources */,
 				98B3A8C92726FFCB00EDD805 /* JoinVC.swift in Sources */,
+				98193D95273D07B800F185B9 /* NetworkResult.swift in Sources */,
+				98193D99273D08DC00F185B9 /* UserSignService.swift in Sources */,
 				98B3A8B92726FD9A00EDD805 /* ViewController.swift in Sources */,
+				9853590F273D95B100DB379C /* UserJoinService.swift in Sources */,
 				98B3A8D327270A7500EDD805 /* ShortsVC.swift in Sources */,
 				98B3A8B52726FD9A00EDD805 /* AppDelegate.swift in Sources */,
+				98193D91273CF93600F185B9 /* NavigationController.swift in Sources */,
 				98B3A8B72726FD9A00EDD805 /* SceneDelegate.swift in Sources */,
 				98B3A8D727270AEF00EDD805 /* SubscribeVC.swift in Sources */,
 				98026A7F272924D000192959 /* ChannelContentDataModel.swift in Sources */,
@@ -348,6 +448,7 @@
 		};
 		98B3A8C62726FD9A00EDD805 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64A96FB608B4E697A91D5F4C /* Pods-youtube_assignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -376,6 +477,7 @@
 		};
 		98B3A8C72726FD9A00EDD805 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CBA6EF59DC73A7EAEB1EF38 /* Pods-youtube_assignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

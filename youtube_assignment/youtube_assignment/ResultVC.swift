@@ -20,10 +20,8 @@ class ResultVC: UIViewController,UITabBarDelegate {
     }
     
     func setName(){
-        if let userName = name {
-            if(userName.count>0){
-                showNameLabel.text="\(userName)님\n환영합니다!"
-            }
+        if let userName = UserDefaults.standard.object(forKey: UserDefaults.userNameKey) {
+            showNameLabel.text="\(userName)님\n환영합니다!"
         }
     }
     
