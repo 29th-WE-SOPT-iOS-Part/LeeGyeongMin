@@ -55,7 +55,7 @@
                                     <constraint firstAttribute="height" constant="48" id="BFB-fa-3vW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mr-Y4-Y3C">
                                 <rect key="frame" x="22" y="622.5" width="89" height="31"/>
@@ -165,7 +165,7 @@
                                     <constraint firstAttribute="height" constant="48" id="PDW-bn-jbQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFy-pT-ITd">
                                 <rect key="frame" x="21" y="535" width="16" height="16"/>
@@ -325,7 +325,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gJ2-MN-CB4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5yf-Pc-ccQ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="5yf-Pc-ccQ" customClass="NavigationController" customModule="youtube_assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9KE-6m-Eht">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

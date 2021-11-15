@@ -81,6 +81,17 @@ class HomeVC: UIViewController {
             FunctionContentData(functionContentName: "게시물")
         ])
     }
+    
+    @IBAction func touchUpToGoLogin(_ sender: Any) {
+
+        let mainSB = UIStoryboard.init(name: "Main", bundle: nil)
+        guard let nextVC = mainSB.instantiateViewController(withIdentifier: "NavigationController") as? UINavigationController else {return}
+        
+        nextVC.modalPresentationStyle = .fullScreen
+        
+        self.present(nextVC, animated: true, completion: nil)
+       
+    }
 }
 
 // MARK: - TableView manage

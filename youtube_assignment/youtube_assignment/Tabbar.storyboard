@@ -232,6 +232,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="wesoptProfile"/>
+                                        <connections>
+                                            <action selector="touchUpToGoLogin:" destination="yTb-OR-6XQ" eventType="touchUpInside" id="1Dr-UV-Tnv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
