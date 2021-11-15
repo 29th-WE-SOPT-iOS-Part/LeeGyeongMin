@@ -91,9 +91,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: .default){
             UIAlertAction in
-                
-                if (self.requestStatus == true){
-                    
+            
+            if (self.requestStatus == true){
+
                     guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ResultVC")
                             as? ResultVC else {return}
                     nextVC.name = self.nameTextField.text
