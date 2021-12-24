@@ -14,6 +14,8 @@
 		98026A7F272924D000192959 /* ChannelContentDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98026A7E272924D000192959 /* ChannelContentDataModel.swift */; };
 		98026A8127293E6600192959 /* FunctionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98026A8027293E6600192959 /* FunctionCollectionViewCell.swift */; };
 		98026A8327297A7500192959 /* FunctionContentDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98026A8227297A7500192959 /* FunctionContentDataModel.swift */; };
+		98110D95277313EF00A08C07 /* Pass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98110D94277313EF00A08C07 /* Pass.storyboard */; };
+		98110D972773163900A08C07 /* PassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98110D962773163900A08C07 /* PassVC.swift */; };
 		98193D91273CF93600F185B9 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98193D90273CF93600F185B9 /* NavigationController.swift */; };
 		98193D93273D071800F185B9 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98193D92273D071800F185B9 /* APIConstants.swift */; };
 		98193D95273D07B800F185B9 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98193D94273D07B800F185B9 /* NetworkResult.swift */; };
@@ -51,6 +53,8 @@
 		98026A7E272924D000192959 /* ChannelContentDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelContentDataModel.swift; sourceTree = "<group>"; };
 		98026A8027293E6600192959 /* FunctionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionCollectionViewCell.swift; sourceTree = "<group>"; };
 		98026A8227297A7500192959 /* FunctionContentDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionContentDataModel.swift; sourceTree = "<group>"; };
+		98110D94277313EF00A08C07 /* Pass.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pass.storyboard; sourceTree = "<group>"; };
+		98110D962773163900A08C07 /* PassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassVC.swift; sourceTree = "<group>"; };
 		98193D90273CF93600F185B9 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		98193D92273D071800F185B9 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		98193D94273D07B800F185B9 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
@@ -130,10 +134,10 @@
 		98110D90277307F000A08C07 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				98B3A8BA2726FD9A00EDD805 /* Main.storyboard */,
 				98B3A8B82726FD9A00EDD805 /* ViewController.swift */,
 				98B3A8C82726FFCB00EDD805 /* JoinVC.swift */,
 				98B3A8CA2726FFDC00EDD805 /* ResultVC.swift */,
-				98B3A8BA2726FD9A00EDD805 /* Main.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -160,6 +164,15 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
+		98110D93277313B400A08C07 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				98110D94277313EF00A08C07 /* Pass.storyboard */,
+				98110D962773163900A08C07 /* PassVC.swift */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
 		98B3A8A82726FD9A00EDD805 = {
 			isa = PBXGroup;
 			children = (
@@ -181,10 +194,11 @@
 		98B3A8B32726FD9A00EDD805 /* youtube_assignment */ = {
 			isa = PBXGroup;
 			children = (
+				98110D8E277304A100A08C07 /* Network */,
 				98110D9227730DDC00A08C07 /* UserDefaults */,
 				98110D90277307F000A08C07 /* Main */,
 				98110D8F2773073900A08C07 /* Detail */,
-				98110D8E277304A100A08C07 /* Network */,
+				98110D93277313B400A08C07 /* Additional */,
 				98B3A8B42726FD9A00EDD805 /* AppDelegate.swift */,
 				98B3A8B62726FD9A00EDD805 /* SceneDelegate.swift */,
 				98B3A8BD2726FD9A00EDD805 /* Assets.xcassets */,
@@ -264,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98B3A8CD272709CF00EDD805 /* Tabbar.storyboard in Resources */,
+				98110D95277313EF00A08C07 /* Pass.storyboard in Resources */,
 				98B3A8C12726FD9A00EDD805 /* LaunchScreen.storyboard in Resources */,
 				98026A792729126600192959 /* videoTableViewCell.xib in Resources */,
 				98B3A8BE2726FD9A00EDD805 /* Assets.xcassets in Resources */,
@@ -323,6 +338,7 @@
 				98026A8127293E6600192959 /* FunctionCollectionViewCell.swift in Sources */,
 				98B3A8D927270AFC00EDD805 /* LibraryVC.swift in Sources */,
 				98193D97273D088600F185B9 /* LoginResponseDataModel.swift in Sources */,
+				98110D972773163900A08C07 /* PassVC.swift in Sources */,
 				98026A782729126600192959 /* videoTableViewCell.swift in Sources */,
 				98026A8327297A7500192959 /* FunctionContentDataModel.swift in Sources */,
 				9853590D273D94C000DB379C /* JoinResponseDataModel.swift in Sources */,

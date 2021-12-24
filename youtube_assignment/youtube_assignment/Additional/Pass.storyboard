@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PassVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PassVC" id="Y6W-OH-hqX" customClass="PassVC" customModule="youtube_assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wesoptiOSPart" translatesAutoresizingMaskIntoConstraints="NO" id="hVj-N4-Pzb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="212"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212" id="7dc-QG-Ja3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="video title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRa-cI-HTC">
+                                <rect key="frame" x="12" y="261" width="402" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9Mh-zK-SVj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYz-ZG-hrO">
+                                <rect key="frame" x="12" y="305" width="33" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCS-gd-s7l">
+                                <rect key="frame" x="0.0" y="44" width="44" height="31"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.down" catalog="system"/>
+                                <connections>
+                                    <action selector="touchUpToGoBack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HaX-q4-KRJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XYz-ZG-hrO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="DqD-Va-uuV"/>
+                            <constraint firstItem="nRa-cI-HTC" firstAttribute="top" secondItem="hVj-N4-Pzb" secondAttribute="bottom" constant="5" id="IyM-lQ-x4T"/>
+                            <constraint firstItem="hVj-N4-Pzb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="NIR-lh-LFD"/>
+                            <constraint firstItem="hVj-N4-Pzb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TvJ-H3-C5n"/>
+                            <constraint firstItem="zCS-gd-s7l" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Ub8-FD-YfF"/>
+                            <constraint firstItem="zCS-gd-s7l" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WH1-v2-sNw"/>
+                            <constraint firstItem="nRa-cI-HTC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="jTf-RQ-nQP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hVj-N4-Pzb" secondAttribute="trailing" id="lcr-D1-5YB"/>
+                            <constraint firstItem="XYz-ZG-hrO" firstAttribute="top" secondItem="nRa-cI-HTC" secondAttribute="bottom" constant="4" id="t2c-f8-MBV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nRa-cI-HTC" secondAttribute="trailing" id="w0Z-tY-E3Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="zCS-gd-s7l" id="WdA-oA-mfa"/>
+                        <outlet property="videoImageView" destination="hVj-N4-Pzb" id="c5g-7X-hqS"/>
+                        <outlet property="videoInfoLabel" destination="XYz-ZG-hrO" id="hHA-KK-2fq"/>
+                        <outlet property="videoTitleLabel" destination="nRa-cI-HTC" id="KSo-Mh-cUc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3" y="53"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="wesoptiOSPart" width="375" height="212"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
