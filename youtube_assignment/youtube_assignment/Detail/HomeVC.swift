@@ -1,6 +1,6 @@
 import UIKit
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController,UIGestureRecognizerDelegate, myTableViewDelegate {
     
     // MARK: - TableView
     @IBOutlet weak var videoTableView: UITableView!
@@ -92,6 +92,20 @@ class HomeVC: UIViewController {
         self.present(nextVC, animated: true, completion: nil)
        
     }
+    
+    func myTableViewDelegate(videoToPresent: VideoContentData) {
+        print("tapped\n\n\n")
+        guard let passVC = UIStoryboard(name: "Pass", bundle: nil).instantiateViewController(withIdentifier: "PassVC") as? PassVC else { return }
+        passVC.passedVideo = videoToPresent
+        passVC.modalPresentationStyle = .fullScreen
+        self.present(passVC, animated: true, completion: nil)
+    }
+    
+//    @objc func imageViewTapped(gestureRecognizer: UIGestureRecognizer){
+//        guard let passVC = UIStoryboard(name: "Pass", bundle: nil).instantiateViewController(withIdentifier: "PassVC") as? PassVC else { return }
+//        passVC.modalPresentationStyle = .fullScreen
+//        self.present(passVC, animated: true, completion: nil)
+//    }
 }
 
 // MARK: - TableView manage
@@ -109,6 +123,7 @@ extension HomeVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: videoTableViewCell.identifier) as? videoTableViewCell else {return UITableViewCell()}
         
+        cell.delegate = self
         cell.setData(videoData: videoContentList[indexPath.row])
         return cell
     }

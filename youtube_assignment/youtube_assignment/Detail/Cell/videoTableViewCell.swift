@@ -15,15 +15,30 @@ class videoTableViewCell: UITableViewCell {
     // MARK: - Button
     @IBOutlet weak var moreMenuButton: UIButton!
     
+    var delegate: myTableViewDelegate?
+    var presentingVideo: VideoContentData?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        setGesture()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
+    func setGesture(){
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(videoTableViewCell.imageViewTapped))
+        videoImageView.addGestureRecognizer(tapRecognizer)
+        videoImageView.isUserInteractionEnabled = true
+    }
+    
+    @objc func imageViewTapped(){
+        delegate?.myTableViewDelegate(videoToPresent: presentingVideo!)
+    }
+    
     func setData(videoData: VideoContentData) {
+        presentingVideo = videoData
         videoTitleLabel.text = videoData.videoTitle
         videoInfoLabel.text = videoData.videoInfo
         videoImageView.image = videoData.makeImageForVideo()
@@ -31,4 +46,8 @@ class videoTableViewCell: UITableViewCell {
         videoImageView.contentMode = .scaleAspectFill
     }
     
+}
+
+protocol myTableViewDelegate {
+    func myTableViewDelegate(videoToPresent: VideoContentData)
 }
